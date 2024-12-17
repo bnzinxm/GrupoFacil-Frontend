@@ -1,0 +1,97 @@
+/* Estilo do painel de usuário, fixo no topo após o sidebar */
+.painel-usuario {
+  position: fixed; /* Fixa no topo */
+  top: 0;
+  left: 260px; /* Inicia após o sidebar */
+  width: calc(
+    100% - 260px
+  ); /* Largura do painel ajustada para o espaço restante */
+  background-color: #f0f0f5; /* Cor ligeiramente mais escura que o fundo do conteúdo */
+  padding: 15px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 0; /* Para ficar acima dos outros conteúdos */
+}
+
+/* Foto de perfil */
+.painel-usuario .foto-perfil {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #007bff; /* Cor de fundo caso não tenha foto */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+/* Nome do usuário */
+.painel-usuario .nome-usuario {
+  font-size: 18px;
+  font-weight: 600;
+  margin-left: 15px;
+  color: #333;
+  flex-grow: 1; /* Para que o nome ocupe o espaço disponível à esquerda */
+}
+
+/* Ícone do menu hamburguer */
+.menu-icon {
+  font-size: 28px;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s ease-in-out;
+}
+
+.menu-icon:hover {
+  color: #007bff;
+}
+
+/* Menu suspenso */
+.menu-dropdown {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: none; /* Inicialmente escondido */
+  z-index: 1000;
+  min-width: 200px;
+  overflow: hidden;
+}
+
+/* Exibe o menu dropdown quando ativo */
+.menu-dropdown.show {
+  display: block;
+}
+
+/* Itens do menu dropdown */
+.menu-item {
+  padding: 12px 20px;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover no item do menu */
+.menu-item:hover {
+  background-color: #f1f1f1;
+  color: #007bff;
+}
+
+/* Estilos para itens desabilitados */
+.menu-item.disabled {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Estilo de hover para o item desabilitado (não altera nada, pois está desabilitado) */
+.menu-item.disabled:hover {
+  background-color: transparent;
+  color: #ccc;
+}

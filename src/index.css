@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Você pode adicionar outras regras CSS customizadas abaixo, se necessário */
+
+/* Customização de tema do DaisyUI (opcional) */
+@layer base {
+  /* Exemplo de personalização do tema */
+  .btn-primary {
+    background-color: #1e40af;
+  }
+}
